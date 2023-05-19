@@ -47,3 +47,15 @@ void addNote() {
 		previous->next = nodeBaru;
 	}
 }
+
+bool searchNode(int nim, Node* current, Node* previous)
+{
+	previous = START;
+	current = START;
+
+	while (current != NULL && nim >= current->noMhs)
+	{
+		previous = current;
+		current = current->next;
+	}
+}
