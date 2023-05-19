@@ -88,11 +88,17 @@ bool deleteNode(int nim)
 
 bool listEmpty()
 {
-	if (listEmpty) {
+	if (START == NULL)
+		return true;
+	else
+		return false;
+	}
+
+void traverse(){
+	if (listEmpty()) {
 		cout << "List Kosong" << endl;
 		system("pause");
 		system("cls");
-		return;
 	}
 	else {
 		Node* currentNode = START;
@@ -107,5 +113,5 @@ bool listEmpty()
 }
 
 void searchData() {
-	if
+	if ()
 }
