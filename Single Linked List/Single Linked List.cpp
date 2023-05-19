@@ -10,7 +10,7 @@ struct Node
 
 Node* START = NULL;
 
-void addNote() {
+void addNode() {
 	int nim;
 	string nama;
 	Node* nodeBaru = new Node();
@@ -119,6 +119,9 @@ void searchData() {
 		return;
 	}
 	else {
-		int nim
+		int nim;
+		cout << "Masukkan NIM : ";
+		cin >> nim;
+		Node*
 	}
 }
