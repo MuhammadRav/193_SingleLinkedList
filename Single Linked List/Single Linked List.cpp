@@ -99,6 +99,7 @@ void traverse(){
 		cout << "List Kosong" << endl;
 		system("pause");
 		system("cls");
+		return;
 	}
 	else {
 		Node* currentNode = START;
@@ -107,11 +108,17 @@ void traverse(){
 			cout << "NIM : " << currentNode->noMhs << ", Nama : " << currentNode->name << endl;
 			currentNode = currentNode->next;
 		}
-
-		cout << endl;
 	}
 }
 
 void searchData() {
-	if ()
+	if (listEmpty()) {
+		cout << "List Kosong" << endl;
+		system("pause");
+		system("cls");
+		return;
+	}
+	else {
+		int nim
+	}
 }
