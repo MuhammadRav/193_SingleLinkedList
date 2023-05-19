@@ -122,27 +122,15 @@ void searchData() {
 		int nim;
 		cout << "Masukkan NIM : ";
 		cin >> nim;
-		Node* nodeBaru = new Node();
-		cout << "Masukkan NIM : ";
-		cin >> nim;
-		cout << "Masukkan Nama : ";
-		cin >> nama;
-		nodeBaru->noMhs = nim;
-		nodeBaru->name = nama;
-
-		if (START == NULL || nim <= START->noMhs) {
-			if (START != NULL && nim == START->noMhs)
-			{
-				cout << "NIM sudah ada" << endl;
+		Node* currentNode = START;
+		while (currentNode != NULL) {
+			if (currentNode->noMhs == nim) {
+				cout << "NIM : " << currentNode->noMhs << ", Nama : " << currentNode->name << endl;
 				return;
 			}
-
-			nodeBaru->next = START;
-			START = nodeBaru;
-			return;
+			currentNode = currentNode->next;
 		}
-
-		Node* previous = START;
-		Node* current = START;
+		cout << "Data tidak ditemukan" << endl;
 	}
 }
+
