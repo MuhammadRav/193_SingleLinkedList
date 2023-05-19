@@ -90,6 +90,8 @@ bool listEmpty()
 {
 	if (listEmpty) {
 		cout << "List Kosong" << endl;
+		system("pause");
+		system("cls");
 		return;
 	}
 	else {
@@ -99,5 +101,11 @@ bool listEmpty()
 			cout << "NIM : " << currentNode->noMhs << ", Nama : " << currentNode->name << endl;
 			currentNode = currentNode->next;
 		}
+
+		cout << endl;
 	}
+}
+
+void searchData() {
+	if
 }
