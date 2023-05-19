@@ -33,8 +33,8 @@ void addNode() {
 		return;
 	}
 
-		Node* current = START;
 		Node* previous = START;
+		Node* current = START;
 
 		while ((current != NULL) && (nim >= current->noMhs))
 		{
@@ -49,15 +49,15 @@ void addNode() {
 
 		nodeBaru->next = current;
 		previous->next = nodeBaru;
-	}
+	
 }
 
-bool searchNode(int nim, Node* current, Node* previous)
+bool serachNode(int nim, Node* current, Node* previous)
 {
 	previous = START;
 	current = START;
 
-	while (current != NULL && nim >= current->noMhs)
+	while (current != NULL && nim > current->noMhs)
 	{
 		previous = current;
 		current = current->next;
@@ -82,7 +82,7 @@ bool deleteNode(int nim)
 	Node* current = START;
 	Node* previous = START;
 	
-	if (searchNode(nim, previous, current) == false)
+	if (serachNode(nim, previous, current) == false)
 		return false;
 	previous->next = current->next;
 	if (current == START)
@@ -96,7 +96,7 @@ bool listEmpty()
 		return true;
 	else
 		return false;
-	}
+}
 
 void traverse(){
 	if (listEmpty()) {
